@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord-like Message System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #36393f;
+      color: #ffffff;
+    }
+    .navbar {
+      background-color: #7289da !important;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .navbar-brand::after {
+      content: "App";
+      color: #ffffff;
+      font-weight: normal;
+    }
+    .message-container {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #4e5163;
+    }
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .user-name {
+      font-weight: bold;
+    }
+    .message-content {
+      word-wrap: break-word;
+    }
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #36393f;
+      padding-top: 50px;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 10px 20px;
+      color: #ffffff;
+    }
+    .sidebar li:hover {
+      background-color: #4e5163;
+    }
+    .message-input-container {
+      position: fixed;
+      bottom: 0;
+      width: calc(100% - 250px);
+      background-color: #2f3136;
+      padding: 10px;
+    }
+    .message-input {
+      width: calc(100% - 20px);
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      margin-right: 10px;
+      background-color: #36393f;
+      color: #ffffff;
+    }
+    .message-input:focus {
+      outline: none;
+    }
+    .send-button {
+      background-color: #7289da;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .send-button:hover {
+      background-color: #677bc4;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" style="color: #ffffff;">Discord-like</a>
+</nav>
+
+<div class="sidebar">
+  <ul>
+    <li>Channel 1</li>
+    <li>Channel 2</li>
+    <li>Channel 3</li>
+    <!-- Add more channels here -->
+  </ul>
+</div>
+
+<div class="container" style="margin-left: 250px;">
+  <div class="message-container">
+    <div class="message">
+      <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+      <span class="user-name">Username</span>
+      <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <div class="message">
+      <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+      <span class="user-name">AnotherUser</span>
+      <span class="message-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</span>
+    </div>
+    <!-- Add more messages here -->
+  </div>
+</div>
+
+<div class="message-input-container">
+  <form id="message-form">
+    <input type="text" class="message-input" placeholder="Write a message...">
+    <button type="submit" class="send-button">Send</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
